@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MS</title>
+<title>Medcrew</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 :root {
   --bg:        #0d0f14;
@@ -346,12 +348,12 @@ body {
 
   <!-- HEADER -->
   <div class="hdr">
-    <div class="hdr-logo">MS</div>
+    <div class="hdr-logo"><img src="https://medcrewsurgicals.in/img/ms.gif" alt="" style="height: 35px;"></div>
     <div class="hdr-info">
-      <div class="hdr-title">Courier Slip Generator</div>
-      <div class="hdr-sub">Professional Label &nbsp;·&nbsp; PIN auto-fills City, District &amp; State</div>
+      <div class="hdr-title">Medcrew Surgicals</div>
+      
     </div>
-    <div class="hdr-badge">INTERNAL TOOL</div>
+    <div class="hdr-badge">INTERNAL TOOL FOR MS</div>
   </div>
 
   <!-- FORM -->
@@ -375,7 +377,7 @@ body {
         <div class="pin-wrap">
           <input type="text" id="r-pin" maxlength="6" placeholder="6-digit PIN"
             oninput="this.value=this.value.replace(/\D/g,'');if(this.value.length===6)lookupPin('r')">
-          <button class="pin-btn" id="r-btn" onclick="lookupPin('r')">Search</button>
+          <button class="pin-btn" id="r-btn" onclick="lookupPin('r')">Search  <i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
         <div class="pin-msg" id="r-msg"></div>
       </div>
@@ -399,7 +401,7 @@ body {
 
   <!-- ACTIONS -->
   <div id="form-actions" class="actions">
-    <button class="btn-gen" onclick="generateSlip()">📋 Generate Courier Slip</button>
+    <button class="btn-gen" onclick="generateSlip()"><i class="fa fa-file-text" aria-hidden="true"></i> Generate Courier Slip </button>
     <button class="btn-clr" onclick="clearAll()">Clear</button>
   </div>
 
@@ -419,7 +421,7 @@ body {
               <div class="city-line" id="sl-r-city-st"></div>
             </div>
             <div class="sl-pin-box">
-              <div class="sl-pin-label">PIN CODE</div>
+              <div class="sl-pin-label">PIN Code</div>
               <div class="sl-pin-val" id="sl-r-pin"></div>
             </div>
           </div>
@@ -441,9 +443,9 @@ body {
     </div>
 
     <div class="slip-actions">
-      <button class="btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
+      <button class="btn-print" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i>  Save PDF</button>
     </div>
-    <button class="btn-new" onclick="clearAll()">← Create New Slip</button>
+    <button class="btn-new" onclick="clearAll()"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>  Create New Slip</button>
   </div>
 
 </div>
@@ -565,7 +567,7 @@ function clearAll() {
 function setSender() {
   const SENDER = {
     name  : 'Medcrew Surgicals',
-    mobile: '+91 7800094141',
+    mobile: '+91 7800094141, 7800094143',
     addr  : 'B-49',
     pin   : '110084',
     city  : 'Wazirabad',
